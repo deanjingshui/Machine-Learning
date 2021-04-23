@@ -14,9 +14,27 @@ where python
 
 ## pip配置
 
-由于公司网络限制，需要编辑pip的配置文件，配置pip源为公司的源，否则不能正常安装python模块。pip的全局配置文件路径为 **%APPDATA%\pip\pip.ini**，用户配置文件路径为 **%HOMEPATH%\pip\pip.ini**，全局配置会覆盖用户配置，如没有手动创建文件夹与文件。
+由于公司网络限制，需要编辑pip的配置文件，配置pip源为公司的源，否则不能正常安装python模块。pip的配置文件：
 
-* 在cmd中执行 pip config list，输出配置信息
+* windows下 
+
+  全局配置文件路径为 %APPDATA%\pip\pip.ini
+
+  用户配置文件路径为 %HOMEPATH%\pip\pip.ini
+
+  全局配置会覆盖用户配置，如没有手动创建文件夹与文件
+
+* Linux下
+
+   $HOME/.config/pip/pip.conf 
+   
+```ini
+[global]
+trusted-host=mirrors.tools.xxxxxx.com
+index-url=http://mirrors.tools.xxxxxx.com/pypi/simple
+```
+
+在终端中执行 pip config list，可输出 pip的配置信息
 
 ```
 pip config list
@@ -57,6 +75,8 @@ pip config list
   ```
 
   **注意**：不建议直接使用 pip的 exe(即 `pip install` ）的方式来安装模块
+  
+  
 
 ## 虚拟环境
 

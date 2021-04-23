@@ -8,6 +8,10 @@
 
  Jupyter工程还提供了[JupyterLab](https://jupyter.org/try)作为新一代的用户界面 
 
+## 为何要用它
+
+在数据挖掘、机器学习领域，器提供了很好的 **交互性**，提高了研究效率。
+
 ## 安装
 
 使用pip安装 Jupyter Notebook ，打开终端（比如Windows 的 cmd）输入：
